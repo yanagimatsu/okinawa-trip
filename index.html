@@ -7,6 +7,25 @@
 <meta property="og:description" content="2026.4/20-4/24 夫婦ふたり旅のしおり">
 <title>沖縄のんびり旅 4泊5日</title>
 <link href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@400;500;700;900&display=swap" rel="stylesheet">
+<script type="module">
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/11.6.0/firebase-app.js";
+  import { getDatabase, ref, onValue, set } from "https://www.gstatic.com/firebasejs/11.6.0/firebase-database.js";
+
+  const firebaseConfig = {
+    apiKey: "AIzaSyAm_TuckxZzX9p8ZwRbIJut7ALF9jQmyhs",
+    authDomain: "okinawa-trip-memo.firebaseapp.com",
+    databaseURL: "https://okinawa-trip-memo-default-rtdb.firebaseio.com",
+    projectId: "okinawa-trip-memo",
+    storageBucket: "okinawa-trip-memo.firebasestorage.app",
+    messagingSenderId: "109456618683",
+    appId: "1:109456618683:web:225b126e6b2573084ea59e"
+  };
+
+  const app = initializeApp(firebaseConfig);
+  const db = getDatabase(app);
+
+  window._fbReady = { db, ref, onValue, set };
+</script>
 <style>
 :root{--cream:#FFF8F0;--coral:#FF7F7F;--ocean:#5BBFCF;--teal:#2A8A8A;--sunset:#E8876B;--purple:#9B7EC8;--dark:#3A3A3A;--lc:#FFE4E1;--lo:#E0F4F7;--ls:#FFF0EB;--lp:#F0EAFF;--lm:#E8F8F0}
 *{margin:0;padding:0;box-sizing:border-box}
@@ -32,6 +51,10 @@ body{font-family:'Zen Maru Gothic',sans-serif;background:var(--cream);color:var(
 .b-row:last-child{border-bottom:none}
 .day-toggle{cursor:pointer;user-select:none}
 .day-content{overflow:hidden;transition:max-height .3s ease}
+.memo-box{width:100%;margin-top:10px;padding:10px 12px;border:1.5px dashed #ddd;border-radius:12px;font-family:'Zen Maru Gothic',sans-serif;font-size:13px;line-height:1.6;resize:none;background:#fffdf9;color:#3A3A3A;min-height:60px;box-sizing:border-box;transition:border-color .2s}
+.memo-box:focus{outline:none;border-color:#5BBFCF;background:#fff}
+.memo-label{font-size:10px;font-weight:700;letter-spacing:1px;color:#bbb;margin-top:10px;margin-bottom:3px}
+.memo-status{font-size:9px;color:#bbb;text-align:right;margin-top:2px;height:12px}
 @keyframes dashAnim{to{stroke-dashoffset:-20}}
 .dash-anim{animation:dashAnim 1.2s linear infinite}
 </style>
@@ -209,7 +232,14 @@ days.forEach(d=>{
       </div>
       <div style="font-size:10px;color:#aaa;margin-bottom:4px">${d.route}</div>
       <span class="htag" style="background:${hts.bg};color:${hts.c}">${d.hotel}</span>
-      <div id="day${d.num}" class="day-content">${itemsHtml}</div>
+      <div id="day${d.num}" class="day-content">
+        ${itemsHtml}
+        <div onclick="event.stopPropagation()">
+          <div class="memo-label">📝 メモ</div>
+          <textarea class="memo-box" id="memo${d.num}" placeholder="ここにメモを書こう…" oninput="saveMemo(${d.num},this.value)"></textarea>
+          <div class="memo-status" id="memoStatus${d.num}"></div>
+        </div>
+      </div>
     </div>`;
 });
 
@@ -249,6 +279,42 @@ function toggleDay(n){
     el.style.maxHeight=el.scrollHeight+'px';el.style.overflow='visible';arrow.style.transform='rotate(180deg)';
   }
 }
+
+// Firebase memo sync
+let memoTimers={};
+function saveMemo(dayNum,text){
+  const status=document.getElementById('memoStatus'+dayNum);
+  status.textContent='保存中…';
+  clearTimeout(memoTimers[dayNum]);
+  memoTimers[dayNum]=setTimeout(()=>{
+    const {db,ref,set}=window._fbReady;
+    set(ref(db,'memos/day'+dayNum),text)
+      .then(()=>{ status.textContent='✓ 保存済み'; setTimeout(()=>{ status.textContent=''; },2000); })
+      .catch(()=>{ status.textContent='保存エラー'; });
+  },800);
+}
+
+// Load & subscribe to memos from Firebase
+function initMemos(){
+  if(!window._fbReady){ setTimeout(initMemos,200); return; }
+  const {db,ref,onValue}=window._fbReady;
+  days.forEach(d=>{
+    onValue(ref(db,'memos/day'+d.num),(snap)=>{
+      const ta=document.getElementById('memo'+d.num);
+      if(!ta) return;
+      const val=snap.val()||'';
+      if(ta.value!==val) ta.value=val;
+      // expand card if memo has content and card is closed
+      const dayEl=document.getElementById('day'+d.num);
+      if(val && (!dayEl.style.maxHeight || dayEl.style.maxHeight==='0px')){
+        // don't auto-open, just auto-resize textarea
+      }
+      ta.style.height='auto';
+      ta.style.height=ta.scrollHeight+'px';
+    });
+  });
+}
+initMemos();
 </script>
 </body>
 </html>
