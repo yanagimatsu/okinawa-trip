@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta property="og:title" content="沖縄のんびり旅 4泊5日">
+<meta property="og:description" content="2026.4/20-4/24 夫婦ふたり旅のしおり">
+<title>沖縄のんびり旅 4泊5日</title>
+<link href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@400;500;700;900&display=swap" rel="stylesheet">
+<style>
+:root{--cream:#FFF8F0;--coral:#FF7F7F;--ocean:#5BBFCF;--teal:#2A8A8A;--sunset:#E8876B;--purple:#9B7EC8;--dark:#3A3A3A;--lc:#FFE4E1;--lo:#E0F4F7;--ls:#FFF0EB;--lp:#F0EAFF;--lm:#E8F8F0}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Zen Maru Gothic',sans-serif;background:var(--cream);color:var(--dark);min-height:100vh}
+.c{max-width:480px;margin:0 auto;padding:0 16px 40px;position:relative;z-index:1}
+.hd{text-align:center;padding:36px 0 20px;position:relative}
+.hd::before{content:'';position:absolute;top:-80px;left:-40px;right:-40px;height:220px;background:radial-gradient(ellipse at center,#FFE8E0 0%,transparent 70%);z-index:0}
+.hd>*{position:relative;z-index:1}
+.sl{font-size:11px;font-weight:700;letter-spacing:2px;margin-bottom:10px}
+.card{background:#fff;border-radius:18px;padding:16px;margin-bottom:12px;box-shadow:0 3px 12px rgba(0,0,0,.06)}
+.card-bl{border-radius:16px;padding:14px 16px;margin-bottom:12px;box-shadow:0 3px 12px rgba(0,0,0,.06);border-left:4px solid}
+.badge{display:inline-block;padding:3px 11px;border-radius:12px;color:#fff;font-size:12px;font-weight:700}
+.htag{display:inline-block;font-size:10px;font-weight:700;padding:2px 8px;border-radius:8px;margin-bottom:8px}
+.tl{display:flex;align-items:flex-start;gap:10px;padding:7px 0;border-bottom:1px dashed #eee}
+.tl:last-child{border-bottom:none}
+.tl-i{width:28px;height:28px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:700;flex-shrink:0;margin-top:2px}
+.tl-t{font-size:11px;font-weight:700;line-height:1}
+.tl-d{font-size:13px;font-weight:500;margin-top:1px}
+.h-row{display:flex;gap:8px;margin-bottom:6px;font-size:13px;align-items:baseline}
+.h-day{font-weight:700;font-size:12px;flex-shrink:0;width:52px}
+.b-row{display:flex;justify-content:space-between;align-items:baseline;padding:6px 0;border-bottom:1px dashed #eee}
+.b-row:last-child{border-bottom:none}
+.day-toggle{cursor:pointer;user-select:none}
+.day-content{overflow:hidden;transition:max-height .3s ease}
+@keyframes dashAnim{to{stroke-dashoffset:-20}}
+.dash-anim{animation:dashAnim 1.2s linear infinite}
+</style>
+</head>
+<body>
+<div class="c">
+
+<!-- HEADER -->
+<div class="hd">
+  <div style="font-size:11px;letter-spacing:6px;color:var(--ocean);font-weight:700">OKINAWA TRIP</div>
+  <div style="font-size:34px;font-weight:900;color:var(--teal);margin:6px 0">沖縄のんびり旅</div>
+  <div style="font-size:15px;font-weight:700;color:var(--coral);letter-spacing:4px">4泊5日プラン</div>
+  <div style="font-size:12px;color:#999;margin-top:6px">2026.4/20(月) - 4/24(金) | 夫婦ふたり旅</div>
+  <div style="width:100px;height:2px;background:var(--ocean);margin:14px auto 0;border-radius:1px;position:relative"><div style="position:absolute;top:-3px;left:50%;transform:translateX(-50%);width:8px;height:8px;background:var(--coral);border-radius:50%"></div></div>
+  <div style="margin-top:12px;display:inline-block;padding:6px 16px;background:linear-gradient(135deg,#f0f0f0,#e8e8e8);border-radius:20px;font-size:10px;color:#777;border:1px solid #e0e0e0;line-height:1.6">
+    <b style="color:#555">JAL903</b> 羽田 07:20 -> 那覇 10:05 <span style="color:#ccc">|</span> <b style="color:#555">JAL922</b> 那覇 20:40 -> 羽田 23:00<br>
+    <span style="font-size:9px;color:#aaa">予約番号: D57OUX | 特典航空券 購入済み</span>
+  </div>
+</div>
+
+<!-- MAP -->
+<div class="card" style="text-align:center">
+  <div class="sl" style="color:var(--ocean)">ROUTE MAP</div>
+  <svg viewBox="0 0 300 500" style="width:100%;max-width:280px">
+    <defs>
+      <linearGradient id="sea" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#C8E6F0"/><stop offset="100%" stop-color="#A8D8EA"/></linearGradient>
+      <filter id="glow"><feGaussianBlur stdDeviation="3" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+    </defs>
+    <rect width="300" height="500" rx="16" fill="url(#sea)"/>
+    <!-- Island -->
+    <path d="M140,60 C155,55 170,58 175,70 C178,80 180,100 178,130 C176,155 172,170 168,190 C164,210 158,230 155,250 C152,265 150,275 148,285 C145,310 142,330 140,350 C138,365 135,375 130,385 C125,395 118,405 115,415 C112,425 110,430 108,435 C105,445 100,450 95,445 C90,440 88,430 90,420 C92,410 98,395 102,380 C106,365 110,345 112,325 C114,305 115,285 118,265 C120,245 122,225 125,205 C128,185 130,165 132,145 C134,125 135,105 136,85 C137,70 138,62 140,60 Z" fill="#D4C9A8" stroke="#C4B998" stroke-width="1.5" opacity="0.9"/>
+    <!-- Motobu peninsula -->
+    <path d="M150,78 C145,72 136,70 130,74 C126,78 128,85 134,87 C140,89 146,85 150,78 Z" fill="#D4C9A8" stroke="#C4B998" stroke-width="0.8"/>
+    <!-- Route lines -->
+    <path d="M108,430 C118,380 135,310 155,225" stroke="var(--coral)" stroke-width="2.5" stroke-dasharray="6,4" fill="none" opacity="0.5" class="dash-anim"/>
+    <path d="M155,220 C152,170 145,120 138,80" stroke="var(--ocean)" stroke-width="2.5" stroke-dasharray="6,4" fill="none" opacity="0.5" class="dash-anim"/>
+    <path d="M138,85 C142,140 148,190 155,220" stroke="var(--ocean)" stroke-width="1.5" stroke-dasharray="3,5" fill="none" opacity="0.25"/>
+    <path d="M155,230 C142,310 128,375 120,395" stroke="var(--purple)" stroke-width="2.5" stroke-dasharray="6,4" fill="none" opacity="0.5" class="dash-anim"/>
+    <path d="M120,395 C112,405 105,415 100,418" stroke="var(--purple)" stroke-width="2" stroke-dasharray="4,4" fill="none" opacity="0.4" class="dash-anim"/>
+    <path d="M100,420 C104,426 106,430 108,432" stroke="var(--teal)" stroke-width="2.5" stroke-dasharray="6,4" fill="none" opacity="0.5" class="dash-anim"/>
+    <!-- Pins: Naha -->
+    <circle cx="108" cy="432" r="7" fill="var(--coral)" filter="url(#glow)"/><circle cx="108" cy="432" r="3" fill="white" opacity="0.5"/>
+    <rect x="50" y="442" width="56" height="26" rx="6" fill="white" opacity="0.85"/>
+    <text x="78" y="454" font-size="11" fill="var(--coral)" font-weight="900" text-anchor="middle">那覇</text>
+    <text x="78" y="464" font-size="7" fill="#999" text-anchor="middle">Day1 / Day5</text>
+    <text x="120" y="442" font-size="7" fill="#999">空港</text>
+    <!-- Pins: Churaumi -->
+    <circle cx="138" cy="80" r="6" fill="var(--ocean)" filter="url(#glow)"/><circle cx="138" cy="80" r="3" fill="white" opacity="0.5"/>
+    <rect x="148" y="70" width="68" height="16" rx="5" fill="white" opacity="0.85"/>
+    <text x="182" y="82" font-size="10" fill="var(--ocean)" font-weight="900" text-anchor="middle">美ら海水族館</text>
+    <!-- Pins: Onna -->
+    <circle cx="155" cy="225" r="9" fill="var(--sunset)" filter="url(#glow)"/><circle cx="155" cy="225" r="4" fill="white" opacity="0.5"/>
+    <text x="155" y="228" font-size="7" fill="white" font-weight="900" text-anchor="middle">3</text>
+    <rect x="170" y="213" width="88" height="26" rx="6" fill="white" opacity="0.85"/>
+    <text x="214" y="225" font-size="11" fill="var(--sunset)" font-weight="900" text-anchor="middle">恩納村</text>
+    <text x="214" y="235" font-size="7" fill="#999" text-anchor="middle">Day2-4 リゾート3泊</text>
+    <!-- Pins: Okinawa World -->
+    <circle cx="120" cy="395" r="5" fill="var(--purple)"/><circle cx="120" cy="395" r="2" fill="white" opacity="0.4"/>
+    <text x="132" y="398" font-size="8" fill="var(--purple)" font-weight="700">玉泉洞</text>
+    <!-- Pins: Senaga -->
+    <circle cx="100" cy="418" r="4" fill="var(--teal)"/><circle cx="100" cy="418" r="2" fill="white" opacity="0.4"/>
+    <text x="66" y="420" font-size="8" fill="var(--teal)" font-weight="700">瀬長島</text>
+    <!-- Legend -->
+    <rect x="12" y="472" width="276" height="20" rx="6" fill="white" opacity="0.75"/>
+    <text x="150" y="486" font-size="7.5" fill="#888" text-anchor="middle">那覇(Day1) > 美ら海(Day2) > 恩納村(Day2-4) > 南部(Day5) > 空港</text>
+  </svg>
+</div>
+
+<!-- RENTAL CAR -->
+<div class="card-bl" style="background:#fff;border-color:var(--ocean)">
+  <div class="sl" style="color:var(--ocean)">RENTAL CAR</div>
+  <div style="font-size:12px;line-height:1.7;color:#555">
+    <b style="color:var(--teal)">借りる:</b> 空港到着ロビーから<b>無料送迎バス</b>で営業所へ (約10分)。手続き含め30分程度。<br>
+    <b style="color:var(--teal)">返す:</b> Day5 18:00頃に同じ営業所へ返却 -> 送迎バスで空港。<br>
+    <b style="color:var(--teal)">Day1:</b> 車で国際通り近くのホテルへ直行 (約15分)。駐車場に停めたら徒歩で散策。<br>
+    <b style="color:var(--teal)">Day3-4:</b> リゾートだらける日は車使わないけど、借りっぱなしの方が安い。
+  </div>
+  <div style="margin-top:8px;padding:8px 10px;background:var(--lo);border-radius:10px;font-size:11px;color:var(--teal);font-weight:600;text-align:center">5日間借りっぱなし: 約 25,000 - 40,000円 (コンパクトカー / 免責補償込)</div>
+</div>
+
+<!-- MATERNITY NOTE -->
+<div class="card-bl" style="background:#fff;border-color:var(--coral)">
+  <div class="sl" style="color:var(--coral)">MATERNITY NOTE</div>
+  <div style="font-size:12px;line-height:1.7;color:#555">
+    <b style="color:var(--coral)">持ち物:</b> 母子手帳 / 保険証 / ブランケット (冷房対策)<br>
+    <b style="color:var(--coral)">休憩:</b> 無理せずこまめに。プランは目安なのでカットOK<br>
+    <b style="color:var(--coral)">食事:</b> 生魚・生肉は避ける。ステーキはしっかり焼きで<br>
+    <b style="color:var(--coral)">病院:</b> 恩納村近くの産婦人科を事前にリストアップ<br>
+    <b style="color:var(--coral)">スパ:</b> マタニティOKか事前に確認
+  </div>
+</div>
+
+<!-- DAY CARDS -->
+<div id="days"></div>
+
+<!-- HOTEL -->
+<div style="background:#F8F0FF;border-radius:16px;padding:16px;margin-bottom:12px">
+  <div class="sl" style="color:#C3B1E1">HOTEL PICK UP (恩納村リゾート 3連泊)</div>
+  <div id="hotels"></div>
+  <div style="font-size:10px;color:#888;margin-top:10px;line-height:1.5;padding:8px 10px;background:#fff;border-radius:10px"><b>Day 1</b> は那覇市内 (国際通り近く) で1泊: 8,000 - 15,000円<br>荷物の移動は 初日->2日目 の<b>1回だけ!</b></div>
+</div>
+
+<!-- BUDGET -->
+<div class="card">
+  <div class="sl" style="color:var(--teal)">BUDGET (2名合計の目安)</div>
+  <div id="budget"></div>
+  <div style="margin-top:12px;padding:10px 12px;background:linear-gradient(135deg,var(--lm),var(--lo));border-radius:12px;text-align:center">
+    <div style="font-size:10px;font-weight:700;color:var(--teal);letter-spacing:1px">TOTAL (2名)</div>
+    <div style="font-size:16px;font-weight:900;color:var(--teal);margin-top:2px">15万円 + 38,000マイル</div>
+    <div style="font-size:14px;font-weight:700;color:var(--ocean)">~ 40万円 + 38,000マイル</div>
+    <div style="font-size:10px;color:#888;margin-top:2px">リゾートホテルの選び方で大きく変動</div>
+  </div>
+</div>
+
+<!-- TIPS -->
+<div style="background:rgba(245,214,168,0.3);border-radius:16px;padding:14px 16px;margin-bottom:12px;text-align:center">
+  <div class="sl" style="color:#C4A060">TIPS</div>
+  <div style="font-size:12px;color:#8A7040;line-height:1.7">
+    朝7時発 & 夜20:40発で初日も最終日もフル活用!<br>
+    Day 3-4 の「だらける2日間」がこのプランの本体<br>
+    体調次第でスキップOK -- 無理しないのが一番大事<br>
+    レンタカーは空港で借りて空港で返す (送迎バス無料)
+  </div>
+</div>
+
+<div style="text-align:center;font-size:11px;color:#ccc;margin-top:16px">--- made with love ---</div>
+</div>
+
+<script>
+const days=[
+  {num:1,date:"4/20 (月)",title:"午前着! 国際通り食べ歩き",color:"#FF7F7F",lc:"#FFE4E1",hotel:"那覇泊",ht:"naha",route:"羽田 -> 那覇空港 -> レンタカー -> 国際通り",items:[
+    {t:"07:20",d:"羽田発 JAL903",i:"飛"},{t:"10:05",d:"那覇空港着",i:"着"},{t:"10:30",d:"送迎バスでレンタカー営業所 -> 出発",i:"車"},{t:"11:30",d:"国際通りへ! ポーたまでスパムおにぎり",i:"米"},{t:"12:30",d:"シーサー作り体験 (国際通り近く)",i:"獅"},{t:"14:30",d:"壺屋やちむん通りでお揃い器探し",i:"器"},{t:"15:30",d:"第一牧志公設市場あたりで食べ歩き",i:"食"},{t:"17:00",d:"ホテルで少し休憩",i:"休"},{t:"19:00",d:"栄町の居酒屋はしご",i:"酒"}]},
+  {num:2,date:"4/21 (火)",title:"美ら海 & 北部ドライブ",color:"#5BBFCF",lc:"#E0F4F7",hotel:"恩納村リゾート [1/3]",ht:"resort",route:"那覇 -> 美ら海水族館 -> 恩納村リゾート",items:[
+    {t:"09:00",d:"那覇出発 -> 北部へドライブ (約2h)",i:"車"},{t:"11:00",d:"美ら海水族館 (ジンベエザメ!)",i:"魚"},{t:"14:00",d:"備瀬のフクギ並木をゆっくりお散歩",i:"木"},{t:"15:30",d:"恩納村リゾートにチェックイン",i:"宿"},{t:"16:30",d:"ホテルでのんびり休憩",i:"休"},{t:"18:30",d:"ホテルディナー",i:"食"}]},
+  {num:3,date:"4/22 (水)",title:"リゾートでだらける日",color:"#E8876B",lc:"#FFF0EB",hotel:"恩納村リゾート [2/3]",ht:"resort",route:"恩納村 -- 終日ホテルステイ",items:[
+    {t:"09:00",d:"朝食ビュッフェをのんびり",i:"朝"},{t:"11:00",d:"プールサイド or ビーチでぼーっとする",i:"海"},{t:"14:00",d:"マタニティOKのスパ or カフェタイム",i:"癒"},{t:"17:30",d:"サンセット鑑賞",i:"夕"},{t:"19:00",d:"ディナー (ホテル or 恩納村)",i:"乾"}]},
+  {num:4,date:"4/23 (木)",title:"もう1日のんびり & ステーキ",color:"#9B7EC8",lc:"#F0EAFF",hotel:"恩納村リゾート [3/3]",ht:"resort",route:"恩納村 -- ゆるくホテル周辺",items:[
+    {t:"09:00",d:"朝食をゆっくり",i:"朝"},{t:"10:30",d:"海辺をゆっくりお散歩",i:"海"},{t:"12:30",d:"恩納村のカフェでランチ",i:"食"},{t:"14:30",d:"ホテルのプールサイドでまったり",i:"癒"},{t:"17:30",d:"最後のサンセット",i:"夕"},{t:"19:00",d:"ステーキディナーで贅沢に!",i:"肉"}]},
+  {num:5,date:"4/24 (金)",title:"南部めぐり -> 帰路",color:"#2A8A8A",lc:"#E8F8F0",hotel:"チェックアウト -> 帰路",ht:"none",route:"恩納村 -> 南部 -> 那覇 -> 空港 (20:40発)",items:[
+    {t:"09:00",d:"ホテル朝食 -> チェックアウト",i:"朝"},{t:"11:00",d:"おきなわワールド (玉泉洞)",i:"洞"},{t:"13:30",d:"瀬長島ウミカジテラスでランチ",i:"島"},{t:"15:00",d:"国際通りでラストお土産タイム",i:"袋"},{t:"17:00",d:"波上宮 & 波の上ビーチでお散歩",i:"波"},{t:"18:00",d:"レンタカー返却 (空港近く営業所)",i:"車"},{t:"18:30",d:"送迎バスで空港 -> A&W & 最後の買い物",i:"味"},{t:"20:40",d:"那覇発 JAL922 -> 羽田 23:00着",i:"飛"}]}
+];
+
+const hotels=[
+  {name:"ハレクラニ沖縄",rank:"最高級",price:"約 50,000-80,000 円/泊",p3:"3泊: 15-24万",feat:"全室50m2以上オーシャンビュー / 5つのプール / 天然温泉 / スパ5つ星",note:"フォーブス5つ星。3連泊朝食付きプランがお得。マタニティ対応も安心",color:"#D4AF37"},
+  {name:"HIYORIオーシャンリゾート",rank:"暮らす旅",price:"約 25,000-45,000 円/泊",p3:"3泊: 7.5-13.5万",feat:"全室70m2以上スイート / キッチン・洗濯機完備 / インルームダイニング",note:"体調に合わせて部屋食もできる。暮らすように過ごすならここ",color:"#5BBFCF"},
+  {name:"カフーリゾートフチャク",rank:"コスパ型",price:"約 17,000-35,000 円/泊",p3:"3泊: 5-10.5万",feat:"平均70m2 / 全室オーシャンビュー / キッチン付 / 12F インフィニティプール",note:"ホテル棟4/20まで工事中 (コンド棟・アネックス棟OK)。コスパ最強",color:"#E8876B"}
+];
+
+const budgetItems=[
+  {item:"航空券 (JALマイル)",price:"38,000マイル + 2,760円",sub:"9,500マイル x2名 x往復 + 税 (購入済み)"},
+  {item:"レンタカー 5日間",price:"25,000 - 40,000 円",sub:"コンパクトカー / 免責補償込"},
+  {item:"那覇ホテル 1泊",price:"8,000 - 15,000 円",sub:"国際通り近く (駐車場付き)"},
+  {item:"リゾートホテル 3泊",price:"50,000 - 240,000 円",sub:"ホテル選びで最も差が出る"},
+  {item:"ガソリン + 高速",price:"5,000 - 7,000 円",sub:"那覇-恩納村 高速700円程度"},
+  {item:"食費 (5日間)",price:"50,000 - 80,000 円",sub:"2名分 / ステーキ・居酒屋含む"},
+  {item:"観光・体験",price:"10,000 - 20,000 円",sub:"美ら海 + シーサー + 玉泉洞 等"}
+];
+
+// Render days
+const daysEl=document.getElementById('days');
+days.forEach(d=>{
+  const htColors={naha:{bg:'#FFE4E1',c:'#FF7F7F'},resort:{bg:'#E0F4F7',c:'#5BBFCF'},none:{bg:'#E8F8F0',c:'#2A8A8A'}};
+  const hts=htColors[d.ht];
+  const itemsHtml=d.items.map((it,i)=>`
+    <div class="tl">
+      <div class="tl-i" style="background:${d.lc};color:${d.color}">${it.i}</div>
+      <div style="flex:1"><div class="tl-t" style="color:${d.color}">${it.t}</div><div class="tl-d">${it.d}</div></div>
+    </div>`).join('');
+  daysEl.innerHTML+=`
+    <div class="card day-toggle" onclick="toggleDay(${d.num})">
+      <div style="display:flex;align-items:flex-start;gap:10px;margin-bottom:4px">
+        <span class="badge" style="background:${d.color}">Day ${d.num}</span>
+        <div style="flex:1"><div style="font-size:10px;color:#aaa">${d.date}</div><div style="font-size:18px;font-weight:900;line-height:1.3">${d.title}</div></div>
+        <span id="arrow${d.num}" style="font-size:14px;color:#ccc;transition:transform .2s">&#x25BC;</span>
+      </div>
+      <div style="font-size:10px;color:#aaa;margin-bottom:4px">${d.route}</div>
+      <span class="htag" style="background:${hts.bg};color:${hts.c}">${d.hotel}</span>
+      <div id="day${d.num}" class="day-content">${itemsHtml}</div>
+    </div>`;
+});
+
+// Render hotels
+const hotelsEl=document.getElementById('hotels');
+hotels.forEach(h=>{
+  hotelsEl.innerHTML+=`
+    <div style="background:#fff;border-radius:12px;padding:12px 14px;margin-bottom:10px;border-left:4px solid ${h.color}">
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:4px">
+        <span style="font-size:15px;font-weight:900">${h.name}</span>
+        <span style="font-size:10px;font-weight:700;padding:2px 8px;border-radius:8px;background:${h.color}22;color:${h.color}">${h.rank}</span>
+      </div>
+      <div style="font-size:12px;font-weight:700;color:${h.color};margin-bottom:2px">${h.price}</div>
+      <div style="font-size:10px;font-weight:600;color:${h.color};margin-bottom:4px">${h.p3}</div>
+      <div style="font-size:11px;color:#666;margin-bottom:4px;line-height:1.5">${h.feat}</div>
+      <div style="font-size:10px;color:#999;line-height:1.4;font-style:italic">${h.note}</div>
+    </div>`;
+});
+
+// Render budget
+const budgetEl=document.getElementById('budget');
+budgetItems.forEach((b,i)=>{
+  budgetEl.innerHTML+=`
+    <div class="b-row">
+      <div style="flex:1"><div style="font-size:12px;font-weight:600">${b.item}</div>${b.sub?`<div style="font-size:10px;color:#999">${b.sub}</div>`:''}</div>
+      <div style="font-size:11px;font-weight:700;color:var(--teal);text-align:right;flex-shrink:0;margin-left:8px">${b.price}</div>
+    </div>`;
+});
+
+// Toggle
+function toggleDay(n){
+  const el=document.getElementById('day'+n);
+  const arrow=document.getElementById('arrow'+n);
+  if(el.style.maxHeight&&el.style.maxHeight!=='0px'){
+    el.style.maxHeight='0px';el.style.overflow='hidden';arrow.style.transform='rotate(0)';
+  }else{
+    el.style.maxHeight=el.scrollHeight+'px';el.style.overflow='visible';arrow.style.transform='rotate(180deg)';
+  }
+}
+</script>
+</body>
+</html>
